@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: Flask-Weather-App
+    runtime: python
+    buildCommand: ""
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: API_KEY
+        value: 96e78798fa4bb5aa4700929d19095de8
