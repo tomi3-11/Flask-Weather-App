@@ -1,0 +1,16 @@
+/* Weather app styling Here */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(120deg, #70c6f8, hsl(208, 90%, 59%));
+    font-family: sans-serif;
+}
+
+.container {
+    /* margin: 3rem 20rem; */
+}

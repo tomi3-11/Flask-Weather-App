@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% block title %}Information - Sky Weather {% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/detailed-information.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="button-top">
+    <a class="btn-top" href="{{ url_for('details', city=weather.city)}}">Back to details</a>
+</div>
+
+<h1 class="info-title">Detailed Weather for {{ weather.city }}</h1>
+<p class="sub-title">Comprehensive weather information</p>
+
+<div class="detailed-grid">
+    <!-- First Card -->
+    <div class="detail-card">
+        <div class="card-title">
+            <div><i class="fa fa-sun-o"></i></div>
+            <h3 class="sun-title">Sun Information</h3>
+        </div>
+        <div class="sun-info">
+            <!-- Sun Rise -->
+            <div class="sunrise">
+                <div class="icon"><i class="fa fa-sun-o"></i></div>
+                <div class="sunrise-info">
+                    <p>Sunrise</p>
+                    <p>{{ weather.sunrise }} 6:13AM</p>
+                </div>
+            </div>
+            <!-- Sun Set -->
+            <div class="sunset">
+                <div class="icon"><i class="fa fa-sun-o"></i></div>
+                <div class="sunset-info">
+                    <p>Sunset</p>
+                    <p>{{ weather.sunset }} 6:20PM</p>
+                </div>
+            </div>
+            <!-- Sun-Info -->
+            <div class="day-length">
+                <p class="day-l">Day Length: 13h 13m</p>
+            </div>
+        </div>
+    </div>
+    <!-- Second Card -->
+     <div class="detail-card">
+        <div class="card-title">
+            <div><i class="fa fa-sun"></i></div>
+            <h3 class="sun-title">Wind Information</h3>
+        </div>
+        <div class="speed-dir-grid">
+            <div class="speed-info">
+                <h3>Speed</h3>
+                <p class="value">{{ weather.wind_speed }}</p>
+                <p>km/h</p>
+            </div>
+            <div class="Direction-info">
+                <h3>Direction</h3>
+                <p class="value">{{ weather.wind_direction }}</p>
+                <p>WSW</p>
+            </div>
+        </div>
+        <div class="Gust-info">
+            <h3>Gust Speed</h3>
+            <p class="value">{{ weather.wind_gust }}</p>
+            <p>km/h</p>
+            <div class="wind-icon">
+                <div><i class="fa fa-wind"></i></div>
+            </div>
+        </div>
+     </div>
+</div>
+
+<div class="temperature">
+    <div class="temperature-info">
+        <div><i class="fa fa-thermometer"></i></div>
+        <h1>24-Hour Tempearture History</h1>
+    </div>
+
+    <!-- Temperature Grid -->
+     <div class="temp-grid">
+        <!-- Card 1 -->
+        <div class="temp-card">
+            <p>00:00</p>
+            <div class="temp-card-info">
+                <div><i class="fa fa-pulse"></i></div>
+                <p>{{ weather.temperature | round }}</p>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="temp-card">
+            <p>03:00</p>
+            <div class="temp-card-info">
+                <div><i class="fa fa-pulse"></i></div>
+                <p>{{ weather.temperature | round }}</p>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="temp-card">
+            <p>06:00</p>
+            <div class="temp-card-info">
+                <div><i class="fa fa-pulse"></i></div>
+                <p>{{ weather.temperature | round }}</p>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="temp-card">
+            <p>09:00</p>
+            <div class="temp-card-info">
+                <div><i class="fa fa-pulse"></i></div>
+                <p>{{ weather.temperature | round }}</p>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="temp-card">
+            <p>12:00</p>
+            <div class="temp-card-info">
+                <div><i class="fa fa-pulse"></i></div>
+                <p>{{ weather.temperature | round }}</p>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="temp-card">
+            <p>15:00</p>
+            <div class="temp-card-info">
+                <div><i class="fa fa-pulse"></i></div>
+                <p>{{ weather.temperature | round }}</p>
+            </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="temp-card">
+            <p>18:00</p>
+            <div class="temp-card-info">
+                <div><i class="fa fa-pulse"></i></div>
+                <p>{{ weather.temperature | round }}</p>
+            </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="temp-card">
+            <p>21:00</p>
+            <div class="temp-card-info">
+                <div><i class="fa fa-pulse"></i></div>
+                <p>{{ weather.temperature | round }}</p>
+            </div>
+        </div>
+        
+     </div>
+
+     <!-- Daily Range -->
+      <div class="daily-range">
+        <h3 class="range-title">Daily Range</h3>
+        <p class="range-value">16°C - 27°C</p>
+      </div>
+</div>
+
+<div class="button">
+    <a class="btn" href="{{ url_for('index')}}">Back to Home</a>
+</div>
+
+{% endblock %}

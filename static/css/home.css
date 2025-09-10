@@ -1,0 +1,91 @@
+/* Style for the home page  */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #70c6f8, hsl(208, 90%, 59%));
+    height: 100vh;
+}
+
+h1 {
+    margin: 2rem;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    padding: 2rem;
+    background: #ffffff99;
+    border: none;
+    border-radius: 1rem;
+    /* filter: blur(5px); */
+    backdrop-filter: blur(10px);
+    /* max-width: 700px;
+    width: auto; */
+}
+
+button {
+    padding: 10px;
+    background: #4b73ff;
+    border-radius: 0.3rem;
+    margin: 20px 0;
+    border: none;
+    width: 400px;
+    color: white;
+    cursor: pointer;
+}
+
+.weather-box {
+    text-align: center;
+    background: lightblue;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+input {
+    padding: 7px;
+    background: #f0f9ff;
+    border: none;
+    border-radius: 0.3rem;
+    width: 400px;
+    margin: 10px 0;
+}
+
+label {
+    margin: 10px 0;
+    text-align: left;
+    color: #1e2021;
+}
+
+.icon-background {
+    background: rgb(64, 48, 235);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 50%;
+}
+
+.popular-cities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    background: lightcyan;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    color: #000;
+}
+
+p {
+    text-align: center;
+    margin: 20px;
+    color: #e1e1ee;
+}

@@ -1,0 +1,153 @@
+/* Detail information Styling */
+
+body {
+    /* background: #fff; */
+}
+
+.details-titles {
+    margin: 1rem 13rem;
+}
+
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+.weather-card {
+    background: linear-gradient(120deg, #b4d6fa, #a2cef091);
+    padding: 20px;
+    border-radius: 10px;
+    display: block;
+    height: 130px;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.weather-card .data {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: #0091ff;
+}
+
+.box-right {
+    display: block;
+    gap: 1rem;
+    text-align: center;
+}
+
+.temp-bac {
+    /* background: #0091ff; */
+    border-radius: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.temp-bac .fa-solid {
+    border-radius: 50%;
+    background: #0091ff;
+    font-size: 4rem;
+    /* font-weight: 100; */
+    padding: 1rem;
+}
+
+.b-btn {
+    text-decoration: none;
+    color: #fff;
+    /* text-align: center; */
+}
+
+.button {
+    background: hsla(206, 100%, 50%, 0.84);
+    padding: 10px 20px;
+    border: none;
+    width: 300px;
+    margin: 2rem auto;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.t-btn {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.top-button {
+    background: hsla(206, 100%, 50%, 0.84);
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    width: fit-content;
+    margin: 2rem 13rem;
+    max-width: 70%;
+}
+
+.detail-title {
+    color: #232222;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#info {
+    color: #f3e9e9;
+    margin-bottom: 10px;
+}
+
+.display-info {
+    margin: 1rem auto;
+    max-width: 70%;
+}
+
+.weather-box {
+    background: linear-gradient(120deg, rgb(207, 231, 237), hwb(188 55% 2% / 0.865));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    height: auto;
+}
+
+#temp {
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #0091ff;
+}
+
+#desc {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #a1a1aa;
+    margin: 10px 0;
+}
+
+#feels {
+    margin: 10px 0;
+    color: #a1a1aa;
+}
+
+.card-name {
+    font-size: 1.2rem;
+    /* margin-bottom: 20px; */
+    margin: auto 0;
+}
+
+.card-sec {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.card-sec div {
+    margin: auto 0;
+}
+.fa {
+    font-size: 1rem;
+}

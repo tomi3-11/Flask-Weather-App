@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}Details - Sky Weather {% endblock %}
+
+{% block style %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/details.css')}}">
+{% endblock %}
+{% block content %}
+
+<div class="top-button">
+    <a class="t-btn" href="{{ url_for('index')}}">Back to home</a>
+</div>
+<div class="details-titles">
+    <h1 class="detail-title">Weather in {{ weather.city }}</h1>
+    <p id="info">Current Conditions and Forecast.</p>
+</div>
+
+<!-- Display information -->
+<div class="display-info">
+    {% if weather %}
+    <div class="weather-box">
+        <div class="box-left">
+            <p id="temp">{{ weather.temperature | round }}°C</p>
+            <p id="desc">{{ weather.description }}</p>
+            <p id="feels">Feels Like {{ weather.feels_like }}</p>
+        </div>
+        <div class="box-right">
+            <div class="temp-bac">
+                <div><i class="fa-solid fa-temperature-full"></i></div>
+            </div>
+            <p>06/08/2025</p>
+        </div>
+        <!-- <h2>{{ weather.city }}, {{ weather.country }}</h2> -->
+    </div>
+    <div class="weather-grid">
+        <div class="weather-card">
+            <div class="card-sec">
+                <div><i class="fa-solid fa-droplet"></i></div>
+                <p class="card-name">Humidity</p>
+            </div>
+            <p class="data">{{ weather.humidity }}%</p>
+        </div>
+        <div class="weather-card">
+            <div class="card-sec">
+                <div><i class="fa-solid fa-gauge"></i></div>
+                <p class="card-name">Pressure</p>
+            </div>
+            <p class="data">{{ weather.pressure }} hPa</p>
+        </div>
+        <div class="weather-card">
+            <div class="card-sec">
+                <div><i class="fa fa-wind"></i></div>
+                <p class="card-name">Wind Speed</p>
+            </div>
+            <p class="data">{{ weather.wind_speed }} km/h%</p>
+        </div>
+        <div class="weather-card">
+            <div class="card-sec">
+                <div><i class="fa fa-eye"></i></div>
+                <p class="card-name">Visibility</p>
+            </div>
+            <p class="data">{{ weather.visibility }} km</p>
+        </div>
+        <div class="weather-card">
+            <div class="card-sec">
+                <div><i class="fa fa-clock"></i></div>
+                <p class="card-name">Time zone</p>
+            </div>
+            <p class="data">{{ weather.timezone }} UTC</p>
+        </div>
+    </div>
+    {% elif error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+</div>
+<div class="button">
+    <a class="b-btn" href="{{ url_for('detailed_information', city=weather.city)}}">View Detailed information</a>
+</div>
+
+{% endblock %}

@@ -1,36 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App.</title>
+{% extends 'base.html' %}
 
-    <!-- Linking Styles -->
-     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
-</head>
-<body>
-    <div class="container">
-        <!-- Heading -->
-        <h1>Weather App</h1>
-        <!-- Form for user inputs -->
-        <form method="POST">
-            <input type="text" name="city" placeholder="Enter your city..." required><br>
-            <button type="submit">Get Weather</button>
-        </form>
+{% block title %}Home - Sky Weather.{% endblock %}
 
-        <!-- Display information -->
-         <div class="display-info">
-            {% if weather %}
-            <div class="weather-box">
-                <h2>{{ weather.city }}, {{ weather.country }}</h2>
-                <p><Strong>Temperature: </Strong>{{ weather.temperature }}°C</p>
-                <p><Strong>Humidity: </Strong>{{ weather.humidity }}%</p>
-                <p><Strong>Description: </Strong>{{ weather.description }}</p>
-            </div>
-            {% elif error %}
-                <p class="error">{{ error }}</p>
-            {% endif %}
-         </div>
-    </div>
-</body>
-</html>
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+{% endblock %}
+
+{% block content %}
+<!-- Heading -->
+<div class="icon-background">
+    <div><i class="fa fa-sunny"></i></div>
+</div>
+<h1>Sky Weather</h1>
+<p>Get accurate weather information for any city</p>
+<!-- Form for user inputs -->
+<form method="POST">
+    <label for=""><i class="fa fa-location"></i>Enter City Name</label><br>
+    <input type="text" name="city" id="cityInput" placeholder=" e.g. New York, London, Tokyo..." required><br>
+    <button type="submit">Get Weather</button>
+</form>
+<p>Or try these popular cities:</p>
+<div class="popular-cities">
+    <a href="" class="btn">New York</a>
+    <a href="" class="btn">London</a>
+    <a href="" class="btn">Tokyo</a>
+    <a href="" class="btn">Paris</a>
+    <a href="" class="btn">Sydney</a>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+
+document.querySelectorAll('.btn').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Preven default anchor behaviour
+        const city = event.target.textContent;
+        document.getElementById('cityInput').value = city;
+    });
+});
+
+</script>
+
+{% endblock %}

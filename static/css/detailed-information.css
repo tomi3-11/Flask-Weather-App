@@ -1,0 +1,206 @@
+/* styles for detailed information page */
+
+body {
+    /* background: #fff; */
+}
+
+.detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+    margin: 1rem 4rem;
+}
+/* Styling the Top part of the page */
+.button-top {
+    margin: 1rem 4rem;
+}
+
+.btn-top {
+    background: hsla(206, 100%, 50%, 0.642);
+    border: none;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.info-title {
+    margin: 1rem 4rem;
+    font-size: 2rem;
+}
+
+.sub-title {
+    margin: 1rem 4rem;
+
+}
+
+/* Sun Information */
+.detail-card {
+    background: linear-gradient(360deg, #d5f4ff, hwb(198 77% 4%));
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.card-title {
+    display: flex;
+    gap: 1rem;
+}
+
+.sunrise {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.icon {
+    background: orange;
+    margin: auto 0;
+    padding: 10px;
+    border-radius: 100%;
+    
+}
+
+.icon .fa {
+    align-items: center;
+}
+
+.sunrise-info {
+    display: block;
+}
+
+.sunset {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.sunset-info {
+    display: block;
+}
+
+.day-length {
+    background: linear-gradient(to right, lightblue, #7ccbff);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Wind Information */
+.speed-dir-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 1rem;
+}
+
+.speed-info, .Direction-info {
+    border-radius: 10px;
+    background: #0091ff33;
+    flex: 1 1 100px;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.value {
+    color: hsl(203, 100%, 50%);
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.Gust-info {
+    background: lightblue;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.wind-icon {
+}
+
+.wind-icon .fa {
+    background: #7ccbff;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+
+/* Styling the Temperature History */
+.temperature {
+    margin: 1rem 4rem;
+    background: linear-gradient(120deg, #a0e0f3, lab(92.95% -10.06 -5.05));
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 16px;
+}
+
+.temperature-info {
+    display: flex;
+    gap: 1rem;
+}
+
+.fa {
+    font-size: 1.5rem;
+}
+
+.temperature-info h1 {
+    font-size: 1.3rem;
+}
+
+.temp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.temp-card {
+    display: block;
+}
+
+.temp-card p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.temp-card-info {
+    background: #0091ff33;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.temp-card-info p {
+    text-align: center;
+}
+
+.daily-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, hwb(203 32% 5%), hsl(203, 92%, 71%));
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Styling the Buttom Button */
+
+.button {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.btn {
+    text-decoration: none;
+    background: #fff;
+    padding: 8px 10px;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background: lightcyan;
+}
